@@ -116,19 +116,17 @@ public class Client
         //IP and port respectively in socket
 
         
-        try 
-        {
-            Socket socket= new Socket("127.0.0.1",6969);
-            Client client = new Client(socket, username); //create object of client taking socket connection and username
+       try {
+            Socket socket = new Socket("127.0.0.1", 6969); // IP and port respectively in socket of server
+            Client client = new Client(socket, username); // create object of client taking socket connection and
+                                                          // username
 
-            //Starting threads 
-            client.listenForMessage();  //thread 1 //A thread to listen for incoming message from server
-            client.sendMessage();  //thread 2   // A thread to send message to Server so ity can be broadcast
-        }
-        catch (IOException e) 
-        {
+            // Starting threads
+            client.listenForMessage(); // thread 1 //A thread to listen for incoming message from server
+            client.sendMessage(); // thread 2 // A thread to send message to Server so ity can be broadcast
+        } catch (IOException e) {
             e.printStackTrace();
-        } 
+        }
     }
 }
 
