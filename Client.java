@@ -118,7 +118,7 @@ public class Client
         
         try 
         {
-            Socket socket= new Socket("170.187.196.35",6969);
+            Socket socket= new Socket("127.0.0.1",6969);
             Client client = new Client(socket, username); //create object of client taking socket connection and username
 
             //Starting threads 
